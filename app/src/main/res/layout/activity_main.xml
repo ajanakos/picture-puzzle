@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cfcccc"
+    android:minHeight="20dp"
+    android:minWidth="40dp"
+    android:longClickable="true">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/four"
+        android:tag="01"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:text="Medium"
+        android:layout_alignTop="@+id/five"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/three"
+        android:tag="01"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:text="Easy"
+        android:layout_marginBottom="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/image" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/five"
+        android:tag="01"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:text="Hard"
+        android:layout_alignTop="@+id/three"
+        android:layout_toEndOf="@+id/image" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:tag="01"
+        android:scaleType="fitCenter"
+        android:onClick="getImage"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:text="Pick Puzzle"
+        android:layout_below="@+id/button51"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a puzzle and choose a difficulty"
+        android:id="@+id/errText"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button51"
+        android:layout_alignBottom="@+id/image" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button51"
+        android:tag="01"
+        android:scaleType="fitCenter"
+        android:onClick="seeScores"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:text="See your scores!"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/five" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Picture Puzzle"
+        android:id="@+id/textView3"
+        android:layout_marginBottom="81dp"
+        android:layout_above="@+id/button51"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button8"
+        android:tag="01"
+        android:scaleType="fitCenter"
+        android:onClick="startGame"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:text="Play"
+        android:layout_above="@+id/errText"
+        android:layout_alignStart="@+id/errText" />
+
+</RelativeLayout>

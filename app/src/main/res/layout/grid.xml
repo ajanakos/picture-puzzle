@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="500dp"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="com.example.ajanakos.puzzle.MainActivity"
+    android:background="#cfcccc">
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:drawSelectorOnTop="false"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:layout_above="@+id/button7"
+        android:layout_alignStart="@+id/button4"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_below="@+id/textView">
+        <!--android:numColumns="auto_fit"-->
+
+    </GridView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="up"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:id="@+id/button3"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:text="Up" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="right"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/button4"
+        android:layout_toEndOf="@+id/button"
+        android:text="Right" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="down"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:id="@+id/button"
+        android:text="Down"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button3" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="left"
+        android:scaleType="fitCenter"
+        android:onClick="onClick"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@android:drawable/btn_default"
+        android:id="@+id/button4"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toStartOf="@+id/button3"
+        android:text="Left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:gravity="center"
+        android:ems="10"
+        android:id="@+id/textView"
+        android:enabled="true"
+        android:focusableInTouchMode="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/button7"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:id="@+id/button7"
+        android:onClick="goBack"
+        android:layout_above="@+id/button3"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignStart="@+id/textView2" />
+</RelativeLayout>
